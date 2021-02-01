@@ -1,0 +1,54 @@
+
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <h2>Patient Details</h2>
+    <div><span class="glyphicon glyphicon-search"></span>
+        <input name="search" [(ngModel)]="searchText" class="search" autocomplete="off" placeholder="Search">
+    </div>
+    <span class="fle">
+   <button class="btn btn-info float-right" (click)="addPatient()" > Add new Patient</button></span>
+    <div class="row col-md-6 col-md-offset-0 custyle">
+        
+        <table class="table table-hover table-striped custab">
+            <thead>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>MobileNumber</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>City</th>
+
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor=" let  item of  patientAll | filter:searchText">
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.mobileNumber}}</td>
+                    <td>{{item.age}}</td>
+                    <td>{{item.gender}}</td>
+                    <td>{{item.city}}</td>
+                    <td><button type="button" class="btns" (click)="EditUser(item)">EDIT</button>
+                    </td>
+                    <td><button type="button" class="btns" (click)="Removedata(item._id)">DELETE</button></td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    
+</div>
+
+
+<!-- <app-add-doctor></app-add-doctor> -->
+

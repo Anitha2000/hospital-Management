@@ -1,0 +1,111 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- ---- Include the above in your HEAD tag -------- -->
+
+<div class="container register-form">
+    <h2 *ngIf="!edit">Add Doctor</h2>
+    <h2 *ngIf="edit">Edit Doctor</h2>
+    <form [formGroup]="doctorForm">
+    <div class="form">
+
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input *ngIf="!edit" type="text" formControlName="username" class="form-control" placeholder="Doctor Username"
+                            value="" />
+                            
+                            <input *ngIf="edit" type="text" formControlName="username" class="form-control" placeholder="Doctor Username"
+                            value="" disabled/>
+                        <div class="error-msg" *ngIf="docSubmit && doctorForm.controls['username'].errors?.required">
+                            Please enter username
+                        </div>
+                        <div class="error-msg" *ngIf="docSubmit && doctorForm.controls['username'].errors?.pattern">
+                            Enter only alphanumeric values
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-validation">
+                            <label>MobileNumber</label>
+                            <input class="form-control" placeholder="Doctor Mobile Number" 
+                                name="mobile number" formControlName="mobileNumber">
+                        </div>
+
+                        <div class="error-msg" *ngIf="docSubmit && doctorForm.controls['mobileNumber'].errors?.required">
+                            Please enter mobile Number
+                        </div>
+
+                    </div>
+
+
+                    <!-- <div class="form-group">
+                        <input type="password" formControlName="password" id="password" class="form-control"
+                            placeholder="Enter your Password" value="" />
+                        <div class="error-msg" *ngIf="docSubmit && doctorForm.controls['password'].errors?.required">
+                            Please enter Password
+                        </div>
+                        <div class="error-msg" *ngIf="docSubmit && doctorForm.controls['password'].errors?.minlength">
+                            Password should be minimum length of 6 characters
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" formControlName="cnfrmPassword" id="cfmPassword" class="form-control"
+                            placeholder="Confirm Password" value="" />
+                        <div class="error-msg" *ngIf="docSubmit && doctorForm.controls['password'].errors?.required">
+                            Please enter Password
+                        </div>
+                        <div class="error-msg" *ngIf="docSubmit && doctorForm.controls['password'].errors?.minlength">
+                            Password should be minimum length of 6 characters
+                        </div>
+                    </div> -->
+
+                </div>
+
+
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" formControlName="name" class="form-control" placeholder="Doctor name"
+                            value="" />
+                        <div class="error-msg" *ngIf="docSubmit && doctorForm.controls['name'].errors?.required">
+                            Please enter username
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Email Id</label>
+                        <input type="email" formControlName="email" class="form-control" placeholder="Doctor Email"
+                            value="" />
+                        <div class="error-msg" *ngIf="docSubmit && doctorForm.controls['email'].errors?.required">
+                            Please enter mailId
+                        </div>
+                        <div class="error-msg" *ngIf="docSubmit && doctorForm.controls['email'].errors?.pattern">
+                            Please enter valid mailId
+                        </div>
+                    </div>
+
+
+
+                    <!-- <div class="form-group">
+                        <div class="form-validation">
+                            <input class="form-control" placeholder="Enter your Mobile Number" maxlength="10"
+                                name="mobile number" formControlName="mobileNumber">
+                        </div>
+
+                        <div class="error-msg" *ngIf="docSubmit && doctorForm.controls['mobileNumber'].errors?.required">
+                            Please enter mobile Number
+                        </div>
+
+                    </div> -->
+                </div>
+                <button type="button"  class="btnSubmit" (click)="doctorSubmit()">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
+</div>

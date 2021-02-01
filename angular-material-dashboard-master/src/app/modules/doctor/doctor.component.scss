@@ -1,0 +1,60 @@
+.custab{
+    border: 0px solid #ccc;
+    
+    margin: 5% 0;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+    .table{
+       
+        width: 1500px;
+    }
+    .custab{
+        border: 0px ;
+        box-shadow: 3px 3px 3px rgb(152, 154, 155);
+      }
+      .container-fluid{
+         
+          padding: 0px ;
+          padding-top: 5px;
+        //   padding-left: 10px;
+      }
+      .DTA{
+          color: rgb(0, 2, 1);
+          font-size: 17px;
+      }
+      .DATAS{
+          color: white;
+      }
+      .DATA{
+          margin-top: 10px;
+          margin-left: 30px;
+          color: white;
+      }
+      .fle{
+          padding-left: 1300px;
+      }
+     .btn{
+          border-radius: 60px;
+      }
+      .container {
+        //  padding-right:10px; 
+        // padding-left: 5px; 
+        margin-right:auto;
+        margin-left:0px;
+    }
+.btns
+{ 
+    padding:7px;
+    border-radius: 60px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 158, 231);
+}
+
+.search{
+    border: 0px ;
+    outline: none;
+}

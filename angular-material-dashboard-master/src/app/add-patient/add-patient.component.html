@@ -1,0 +1,77 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- ---- Include the above in your HEAD tag -------- -->
+
+<div class="container register-form">
+    <h2 *ngIf="!edit">Add Patient</h2>
+    <h2 *ngIf="edit">Edit Patient</h2>
+    <form [formGroup]="patientForm">
+        <div class="form">
+
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" formControlName="name" placeholder="Patient Name *"
+                                value="" />
+                            <div class="error-msg" *ngIf="patientSub && patientForm.controls['name'].errors?.required">
+                                Please enter Name
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>MobileNumber</label>
+                            <input type="text" class="form-control" formControlName="mobileNumber"
+                                placeholder="Mobile Number *" value="" />
+                            <div class="error-msg"
+                                *ngIf="patientSub && patientForm.controls['mobileNumber'].errors?.required">
+                                Please enter mobile Number
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label>Email Id</label>
+                            <input type="text" class="form-control" formControlName="email"
+                                placeholder="Patient EmailId *" value="" />
+                            <div class="error-msg" *ngIf="patientSub && patientForm.controls['email'].errors?.required">
+                                Please enter mailId
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Age</label>
+                            <input type="text" class="form-control" formControlName="age" placeholder="Age *"
+                                value="" />
+                            <div class="error-msg" *ngIf="patientSub && patientForm.controls['age'].errors?.required">
+                                Please enter age
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <input type="text" class="form-control" formControlName="gender" placeholder="Gender *"
+                                value="" />
+                            <div class="error-msg"
+                                *ngIf="patientSub && patientForm.controls['gender'].errors?.required">
+                                Please enter gender
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" class="form-control" formControlName="city" placeholder="City *"
+                                value="" />
+                            <div class="error-msg" *ngIf="patientSub && patientForm.controls['city'].errors?.required">
+                                Please enter gender
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btnSubmit" (click)="patientSubmit()">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

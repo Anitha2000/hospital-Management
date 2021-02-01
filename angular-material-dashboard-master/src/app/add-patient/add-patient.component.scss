@@ -1,0 +1,36 @@
+.note
+{
+    text-align: center;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+}
+.form-content
+{
+    border-radius:2rem;
+    padding: 5%;
+    border: 0px solid #ced4da;
+    margin-bottom: 2%;
+    box-shadow: 3px 3px 3px rgb(152, 154, 155);
+}
+.form-control{
+    border-radius:1.5rem;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+.container{
+padding-top: 150px;
+}
+.error-msg{
+    color: red;
+}

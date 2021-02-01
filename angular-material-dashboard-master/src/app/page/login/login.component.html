@@ -1,0 +1,116 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<!--  
+    <div class="container">
+        <div class="row"> -->
+     <div class="hwd">    
+<div id="login">
+<div
+class="p-5 text-center bg-image"
+style="
+  background-image: url(https://www.nhsfife.org/media/1017/sb_victoriahospitalcuts_270416-7jpg-e1473857945618.jpg);
+  height: 937px;
+"
+>
+  
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12">
+
+                    <form  [formGroup]="loginForm" id="login-form">
+                        <h1 class="login-form text-center font-italic">Login</h1>
+                        <div class="form-group">
+                            <label class="font-italic heading">Username</label>
+                            <input formControlName="username" type="text" class="form-control" placeholder="">
+                            <div class="error-msg" *ngIf="Login && loginForm.controls['username'].errors?.required">
+                                Please enter username
+                            </div>
+                            <div class="error-msg" *ngIf="Login && loginForm.controls['username'].errors?.pattern">
+                                Enter only alphanumeric values
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-italic heading">Password</label>
+                            <input formControlName="password" type="password" class="form-control" placeholder="">
+                        </div>
+                        <div class="error-msg" *ngIf="Login && loginForm.controls['password'].errors?.required">
+                            Please enter Password
+                        </div>
+                        <div class="error-msg" *ngIf="Login && loginForm.controls['password'].errors?.minlength">
+                            Password should be minimum length of 6 characters
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <div (click)=signUp()>
+                                    <button class="btn btn-info btn-md float-left round">SignUp</button>
+                                </div>
+                                <div (click)=login()>
+                                    <button class="btn btn-info btn-md float-right round">Login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- <div class="copy-text">
+                        <span (click)="forgotPassword()" text-blue>forgot
+                            password?</span>
+                    </div> -->
+                </div>
+                <!-- <div class="col-md-8 banner-sec">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="https://static.pexels.com/photos/33972/pexels-photo.jpg"
+                                alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="banner-text">
+                                    <h2>This is Heaven</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg"
+                                alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="banner-text">
+                                    <h2>This is Heaven</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg"
+                                alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="banner-text">
+                                    <h2>This is Heaven</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+</div>   

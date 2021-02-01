@@ -1,0 +1,169 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="hwd">
+    <div class="container ">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="panel with-nav-tabs panel-info">
+                    <div class="panel-heading">
+                        <!-- <ul class="nav nav-tabs">
+                        <li class="active ">
+                            <button type="button" (click)="login()"> Login </button>
+                        </li>
+                    </ul> -->
+                        <div class="panel-body">
+                            <div class="tab-content">
+                                <div id="login" class="tab-pane fade in active register">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <h2 class="text-center" style="color: #0e74d4;"> <Strong> Register </Strong>
+                                            </h2>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12">
+
+                                                    <form [formGroup]="signupForm">
+
+
+                                                        <div class="row register-form">
+
+                                                            <div class="col-xs-12 col-sm-12 col-md-12">
+
+                                                                <div class="form-group">
+                                                                    <input type="text" formControlName="username"
+                                                                        class="form-control" placeholder="Username"
+                                                                        value="" />
+                                                                    <div class="error-msg"
+                                                                        *ngIf="signup && signupForm.controls['username'].errors?.required">
+                                                                        Please enter username
+                                                                    </div>
+                                                                    <div class="error-msg"
+                                                                        *ngIf="signup && signupForm.controls['username'].errors?.pattern">
+                                                                        Enter only alphanumeric values
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="password" formControlName="password"
+                                                                        id="password" class="form-control"
+                                                                        placeholder="Enter your Password" value="" />
+                                                                    <div class="error-msg"
+                                                                        *ngIf="signup && signupForm.controls['password'].errors?.required">
+                                                                        Please enter Password
+                                                                    </div>
+                                                                    <div class="error-msg"
+                                                                        *ngIf="signup && signupForm.controls['password'].errors?.minlength">
+                                                                        Password should be minimum length of 6
+                                                                        characters
+                                                                    </div>
+                                                                    <!-- <div *ngIf="f.password.touched && f.password.invalid" class="alert alert-danger">
+                                        <div *ngIf="f.password.errors.required">Password is required.</div>
+                                    </div> -->
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="password"
+                                                                        formControlName="cnfrmPassword" id="cfmPassword"
+                                                                        class="form-control"
+                                                                        placeholder="Confirm Password" value="" />
+                                                                    <div class="error-msg"
+                                                                        *ngIf="signup && signupForm.controls['password'].errors?.required">
+                                                                        Please enter Password
+                                                                    </div>
+                                                                    <div class="error-msg"
+                                                                        *ngIf="signup && signupForm.controls['password'].errors?.minlength">
+                                                                        Password should be minimum length of 6
+                                                                        characters
+                                                                    </div>
+                                                                    <div class="error-msg">
+                                                                                {{errorMessage}}
+                                                                    </div>
+                                                                    
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="col-xs-12 col-sm-12 col-md-12">
+
+                                                                <div class="form-group">
+                                                                    <input type="text" formControlName="name"
+                                                                        class="form-control"
+                                                                        placeholder="Enter your name" value="" />
+                                                                    <div class="error-msg"
+                                                                        *ngIf="signup && signupForm.controls['name'].errors?.required">
+                                                                        Please enter username
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="email" formControlName="email"
+                                                                        class="form-control" placeholder="Your Email"
+                                                                        value="" />
+                                                                    <div class="error-msg"
+                                                                        *ngIf="signup && signupForm.controls['email'].errors?.required">
+                                                                        Please enter mailId
+                                                                    </div>
+                                                                    <div class="error-msg"
+                                                                        *ngIf="signup && signupForm.controls['email'].errors?.pattern">
+                                                                        Please enter valid mailId
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="form-validation">
+                                                                        <input class="form-control"
+                                                                            placeholder="Enter your Mobile Number"
+                                                                            maxlength="10" name="mobile number"
+                                                                            formControlName="mobileNumber">
+                                                                    </div>
+                                                                    <div class="error-msg"
+                                        *ngIf="signup && signupForm.controls['mobileNumber'].errors?.required">
+                                        Please enter mobile number
+                                    </div>
+                                                                    <!-- <div class="error-msg">
+                                        {{resMessage3}}
+                                    </div> -->
+                                                                    <!-- <div class="error-msg"
+                                        *ngIf="signup && signupForm.controls['mobileNumber'].errors?.pattern && !signupForm.controls['mobileNumber'].hasError('minlength')">
+                                        Phone number should starts with 6-9 and remaining 9 digit with 0-9
+                                    </div>
+                                    <div class="error-msg"
+                                        *ngIf="signup && signupForm.controls['mobileNumber'].errors?.pattern && signupForm.controls['mobileNumber'].hasError('minlength')">
+                                        Phone number should be 10 digit and starts with 6-9 & remaining 9 digit with 0-9
+                                    </div>
+                                    <div class="error-msg"
+                                        *ngIf="signup && signupForm.controls['mobileNumber'].hasError('minlength') && !signupForm.controls['mobileNumber'].errors?.pattern">
+                                        Please enter 10 digit mobile number
+                                    </div> -->
+                                                                </div>
+                                                                <div (click)=signUp()>
+                                                                    <button type="button"
+                                                                    class="btn btn-info btn-md float-left round">SignUp</button>
+                                                                    <button type="button" (click)="login()" class="btn btn-info btn-md float-right round login"> Login
+                                                                    </button>
+                                                                </div>
+                                                                <div class="container-fluid">
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <!-- </div>
+
+            </div> -->
+                                                </div>
+                                                <!-- </div>
+
+</div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

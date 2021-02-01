@@ -1,0 +1,35 @@
+
+
+.panel
+{
+   margin: 15%;
+ //   border: 1px solid #9C9C9C;
+ // background-color: #EAEAEA;
+}
+// .container  {
+//     //  margin-top:-0px;
+// //      margin-bottom:0px;
+// //     // max-width: 600px;
+// //     // height: 400px;
+// //    padding-bottom: 130px;
+//     padding: 147px;
+// //    padding-right:120px;
+// //    padding-left:120px;
+// //     border: 1px solid #9C9C9C;
+//      background-color: #4fbcee;
+
+ // }
+ .hwd{
+     margin: 0;
+     padding: 0;
+      background: -webkit-linear-gradient(0deg, #074388 0%, #041b1b 100%);
+     height: 100vh;
+   }
+
+   .login{
+     float: right
+   }
+
+   .error-msg{
+     color: red
+   }
